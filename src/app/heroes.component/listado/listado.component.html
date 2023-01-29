@@ -1,0 +1,31 @@
+<button (click)="deleteHeroe()">
+    Eliminar un heroe
+</button>
+
+<button (click)="addHeroe()">
+    Agregar heroe
+</button>
+
+<div *ngIf="this.deletedHeroes.length > 0">
+    <h3>
+        Heroes Eliminados
+    </h3>
+    
+    <ul *ngFor="let heroe of deletedHeroes">
+        <li>{{ heroe }}</li>
+    </ul>
+</div>
+
+<br><br>
+
+<p>Listado de Héroes</p>
+
+<ul *ngFor="let heroe of heroes">
+    <li>{{ heroe }}</li>
+</ul>
+<br>
+<br>
+<ul *ngFor="let heroe of otherHeroes">
+    <li>{{ heroe }}</li>
+</ul>
+
