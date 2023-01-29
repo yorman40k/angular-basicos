@@ -1,2 +1,28 @@
 <p>DBZ is the most zzzz anime</p>
 <hr>
+
+<div class="row">
+    <div class="col">
+        <h3>Personajes</h3>
+        <hr>
+        <ul>
+            <li>Krillin -700</li>
+            <li>Goku - 15.000</li>
+            <li>Vegeta - 7.500</li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <h3>Agregar personaje</h3>
+        <hr>
+
+        <form (ngSubmit)="addCharacter()">
+            <input type="text" placeholder="Nombre">
+            <input type="number" placeholder="Poder">
+
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
+    </div>
+</div>
