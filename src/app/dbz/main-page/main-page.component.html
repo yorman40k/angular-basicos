@@ -5,20 +5,29 @@
     <div class="col">
         <h3>Personajes</h3>
         <hr>
-        <ul>
-            <li>Krillin -700</li>
-            <li>Goku - 15.000</li>
-            <li>Vegeta - 7.500</li>
+        <ul *ngFor="let character of characters">
+            <li>{{character.name}} - {{character.power | number}}</li>
         </ul>
     </div>
 
     <div class="col">
-        <h3>Agregar personaje</h3>
+        <h3>Agregar personaje <small>{{ newCharacter.name }}</small></h3>
         <hr>
 
         <form (ngSubmit)="addCharacter()">
-            <input type="text" placeholder="Nombre">
-            <input type="number" placeholder="Poder">
+            <input 
+                type="text" 
+                placeholder="Nombre"
+                name="name" 
+                [(ngModel)]="newCharacter.name"
+            />
+
+            <input 
+                type="number" 
+                placeholder="Poder"
+                name="power"
+                [(ngModel)]="newCharacter.power"    
+            />
 
             <button type="submit">
                 Agregar
